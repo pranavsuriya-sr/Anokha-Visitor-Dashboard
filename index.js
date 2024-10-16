@@ -16,7 +16,9 @@ const database = getDatabase(app);
 
 // DOM Elements
 const sendDataButton = document.getElementById("sendData");
+const sendDataButtonabc = document.getElementById("sendDataabc");
 const nameInput = document.getElementById("register-username");
+const nameInputabc = document.getElementById("register-username-abc");
 const totalEntriesElement = document.getElementById("totalEntries");
 const scannedDataBody = document.getElementById("scannedDataBody");
 const datePickerBtn = document.getElementById("datePickerBtn");
@@ -28,6 +30,7 @@ let selectedDate = new Date();
 
 // Event Listeners
 sendDataButton.addEventListener("click", submitForm);
+sendDataButtonabc.addEventListener("click", submitFormabc);
 datePickerBtn.addEventListener("click", openDatePicker);
 
 // Submit Form Function
@@ -42,10 +45,28 @@ function submitForm() {
   push(usersRef, {
     rollNumber: rollNumber,
     timestamp: new Date().toISOString(),
+    type: 'scanned'
+  }).then(() => {
+    nameInput.value = '';
+  }).catch((error) => {
+    alert("Error recording roll number: " + error.message);
+  });
+}
+
+function submitFormabc() {
+  const rollNumber = nameInputabc.value.trim();
+  if (!rollNumber) {
+    alert("Please enter a valid roll number.");
+    return;
+  }
+
+  const usersRef = ref(database, 'Users');
+  push(usersRef, {
+    rollNumber: rollNumber,
+    timestamp: new Date().toISOString(),
     type: 'manual'
   }).then(() => {
-    alert("Roll number added successfully!");
-    nameInput.value = '';
+    nameInputabc.value = '';
   }).catch((error) => {
     alert("Error recording roll number: " + error.message);
   });
@@ -146,3 +167,13 @@ onValue(usersRef, (snapshot) => {
 //     type: 'scanned'
 //   });
 // }, 5000);
+
+const inputb = document.getElementById('register-username');
+        const submitButton = document.getElementById('sendData');
+
+        inputb.addEventListener('input', function() {
+            if (inputb.value.length === 16) {
+                // Automatically trigger form submission
+                submitButton.click();
+            }
+        });
