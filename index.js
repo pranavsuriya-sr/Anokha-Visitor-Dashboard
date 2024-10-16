@@ -2,14 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD3Mm6elpeVelrUCpGIZ0mn3W1V5_Cmv00",
-  authDomain: "anokhanames.firebaseapp.com",
-  projectId: "anokhanames",
-  storageBucket: "anokhanames.appspot.com",
-  messagingSenderId: "836047514814",
-  appId: "1:836047514814:web:9f467c5fb11f5e251d82ef",
-  measurementId: "G-6N779HR6T9"
-  };
+  apiKey: "AIzaSyAzI6dxsYXbgk9y9TPk_D3go5TACID9gnM",
+  authDomain: "anokhanames-feee5.firebaseapp.com",
+  projectId: "anokhanames-feee5",
+  storageBucket: "anokhanames-feee5.appspot.com",
+  messagingSenderId: "351552017796",
+  appId: "1:351552017796:web:1278bcb174d00f18b4b9d1",
+  measurementId: "G-GH14Q0X6JV"
+};
 
 
 const app = initializeApp(firebaseConfig);
