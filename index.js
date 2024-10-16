@@ -33,9 +33,23 @@ sendDataButton.addEventListener("click", submitForm);
 sendDataButtonabc.addEventListener("click", submitFormabc);
 datePickerBtn.addEventListener("click", openDatePicker);
 
+function formatTime(date) {
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+
+  return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm}`;
+}
+
+
 // Submit Form Function
 function submitForm() {
   const rollNumber = nameInput.value.trim();
+  const currTime = formatTime(new Date());
   if (!rollNumber) {
     alert("Please enter a valid roll number.");
     return;
@@ -44,7 +58,7 @@ function submitForm() {
   const usersRef = ref(database, 'Users');
   push(usersRef, {
     rollNumber: rollNumber,
-    timestamp: new Date().toISOString(),
+    timestamp: currTime,
     type: 'scanned'
   }).then(() => {
     nameInput.value = '';
@@ -55,6 +69,8 @@ function submitForm() {
 
 function submitFormabc() {
   const rollNumber = nameInputabc.value.trim();
+  const currTime = formatTime(new Date());
+
   if (!rollNumber) {
     alert("Please enter a valid roll number.");
     return;
@@ -63,7 +79,7 @@ function submitFormabc() {
   const usersRef = ref(database, 'Users');
   push(usersRef, {
     rollNumber: rollNumber,
-    timestamp: new Date().toISOString(),
+    timestamp: currTime,
     type: 'manual'
   }).then(() => {
     nameInputabc.value = '';
