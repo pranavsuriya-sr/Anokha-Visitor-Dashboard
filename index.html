@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-
-    <input type = "text" id = "register-username"></inputtype>
-    <button type = "submit" id = "sendData">Push</button>
-    
-    <script src="index.js" type = "module"></script>
+<body class="min-h-screen bg-black text-white p-8">
+    <div class="container mx-auto">
+        <header class="mb-8 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Admin Dashboard</h1>
+            <div class="flex items-center space-x-4">
+                <button id="datePickerBtn" class="bg-gray-800 text-white px-4 py-2 rounded">
+                    <span id="selectedDate">Pick a date</span>
+                </button>
+            </div>
+        </header>
+        <div class="mb-8 text-center">
+            <h2 id="totalEntries" class="text-6xl font-bold">Total Entries: 0</h2>
+            <p id="currentDate" class="text-xl mt-2"></p>
+        </div>
+        <main class="space-y-6">
+            <div class="bg-gray-900 border-gray-800 rounded-lg p-6">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-white">Manual Entry</h3>
+                    <p class="text-gray-400">Add a roll number manually</p>
+                </div>
+                <div class="flex space-x-2">
+                    <input id="register-username" type="text" placeholder="Enter roll number" class="flex-grow bg-gray-800 border-gray-700 text-white px-4 py-2 rounded">
+                    <button id="sendData" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200">Add</button>
+                </div>
+            </div>
+            <div class="bg-gray-900 border-gray-800 rounded-lg p-6">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-white">Scanned Data</h3>
+                    <p class="text-gray-400">Live view of student card scans and manual entries</p>
+                </div>
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-800">
+                            <th class="text-left py-2 text-gray-300">Roll Number</th>
+                            <th class="text-left py-2 text-gray-300">Time</th>
+                            <th class="text-left py-2 text-gray-300">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scannedDataBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
