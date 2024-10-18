@@ -90,7 +90,7 @@ function updateDashboard(data) {
     isSameDay(new Date(user.timestamp), selectedDate)
   );
 
-  totalEntriesElement.textContent = `Day 2 Total Entries: ${filteredUsers.length}`;
+  totalEntriesElement.textContent = `Live Visitors: ${filteredUsers.length}`;
 
   // Clear existing rows
   scannedDataBody.innerHTML = '';
