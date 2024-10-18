@@ -74,7 +74,7 @@ function submitFormabc() {
 
 // Dashboard Functions
 function initializeDashboard() {
-  const usersRef = ref(database, 'Users');
+  const usersRef = ref(database, 'UsersDayTwo');
   onValue(usersRef, (snapshot) => {
     const data = snapshot.val();
     updateDashboard(data);
