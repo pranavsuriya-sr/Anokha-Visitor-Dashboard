@@ -41,7 +41,7 @@ function submitForm() {
     return;
   }
 
-  const usersRef = ref(database, 'UsersDayTwo');
+  const usersRef = ref(database, 'UsersDayThree');
   push(usersRef, {
     rollNumber: rollNumber,
     timestamp: new Date().toISOString(),
@@ -60,7 +60,7 @@ function submitFormabc() {
     return;
   }
 
-  const usersRef = ref(database, 'UsersDayTwo');
+  const usersRef = ref(database, 'UsersDayThree');
   push(usersRef, {
     rollNumber: rollNumber,
     timestamp: new Date().toISOString(),
@@ -74,7 +74,7 @@ function submitFormabc() {
 
 // Dashboard Functions
 function initializeDashboard() {
-  const usersRef = ref(database, 'UsersDayTwo');
+  const usersRef = ref(database, 'UsersDayThree');
   onValue(usersRef, (snapshot) => {
     const data = snapshot.val();
     updateDashboard(data);
@@ -153,7 +153,7 @@ let lastKnownData = null;
 initializeDashboard();
 
 // Real-time updates
-const usersRef = ref(database, 'UsersDayTwo');
+const usersRef = ref(database, 'UsersDayThree');
 onValue(usersRef, (snapshot) => {
   lastKnownData = snapshot.val();
   updateDashboard(lastKnownData);
