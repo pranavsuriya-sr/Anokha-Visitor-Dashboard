@@ -29,8 +29,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/admin-dashboard-visitor-management.git
-   cd admin-dashboard-visitor-management
+   git clone https://github.com/pranavsuriya-sr/anokhaNames.git
+   cd anokhaNames
    ```
 
 2. **Set up Firebase**
@@ -71,12 +71,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 📞 Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+For questions or feedback, feel free to contact [Pranavsuriya](https://github.com/pranavsuriya-sr) and [ShrishKumar](https://github.com/ShrishKumar22) on GitHub.
+
 
 Project Link: [https://github.com/yourusername/admin-dashboard-visitor-management](https://github.com/yourusername/admin-dashboard-visitor-management)
 
 ---
 
 <div align="center">
-  Made with ❤️ by <a href="https://github.com/yourusername">Your Name</a>
+  Made with ❤️ by <a href="https://github.com/pranavsuriya-sr">Pranavsuriya</a> and <a href="https://github.com/ShrishKumar22">ShrishKumar</a>
 </div>
