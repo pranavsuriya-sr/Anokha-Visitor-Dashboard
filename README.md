@@ -23,7 +23,7 @@
 - **🔥 Firebase Integration:** Seamless data synchronization and storage
 - **📅 Date Selector:** View historical entries with ease
 - **🔄 Auto-Submission:** Instant submission of scanned roll numbers
-- **📱 Responsive Design:** Sleek, modern UI that works on all devices
+- **📱 Responsive Design:** Sleek, modern UI that works on desktop and PCs
 
 ## 🚀 Quick Start
 
@@ -74,7 +74,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 For questions or feedback, feel free to contact [Pranavsuriya](https://github.com/pranavsuriya-sr) and [ShrishKumar](https://github.com/ShrishKumar22) on GitHub.
 
 
-Project Link: [https://github.com/yourusername/admin-dashboard-visitor-management](https://github.com/yourusername/admin-dashboard-visitor-management)
+Project Link: [https://github.com/yourusername/admin-dashboard-visitor-management](https://github.com/pranavsuriya-sr/anokhaNames.git)
 
 ---
 
