@@ -74,7 +74,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 For questions or feedback, feel free to contact [Pranavsuriya](https://github.com/pranavsuriya-sr) and [ShrishKumar](https://github.com/ShrishKumar22) on GitHub.
 
 
-Project Link: [https://github.com/yourusername/admin-dashboard-visitor-management](https://github.com/pranavsuriya-sr/anokhaNames.git)
+Project Link: [https://github.com/pranavsuriya-sr/anokhaNames](https://github.com/pranavsuriya-sr/anokhaNames.git)
 
 ---
 
