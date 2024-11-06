@@ -4,7 +4,7 @@
 </div>
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400" alt="Dashboard Preview" width="800">
+  <img src="/img1.jpg" alt="Dashboard Preview" width="800">
 </p>
 
 <div align="center">
